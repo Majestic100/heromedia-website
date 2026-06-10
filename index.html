@@ -693,65 +693,12 @@
         </li>
       </ul>
 
-      <!-- Calendly inline widget — force-loaded on page load (no lazy IntersectionObserver) -->
-      <div id="calendly-embed"
-           class="calendly-inline-widget"
+      <!-- Calendly inline widget (official embed, dark theme to match site) -->
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/inkflow-/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1&background_color=080808&text_color=ffffff&primary_color=0055fe"
            style="min-width:320px;height:700px;">
       </div>
-      <script>
-        (function () {
-          var url = 'https://calendly.com/inkflow-/new-meeting';
-          var parent = document.getElementById('calendly-embed');
-          var loaded = false;
-
-          function injectAssets() {
-            if (loaded) return;
-            loaded = true;
-            // Inject Calendly stylesheet
-            var css = document.createElement('link');
-            css.rel = 'stylesheet';
-            css.href = 'https://assets.calendly.com/assets/external/widget.css';
-            document.head.appendChild(css);
-            // Inject Calendly script
-            var js = document.createElement('script');
-            js.src = 'https://assets.calendly.com/assets/external/widget.js';
-            js.async = true;
-            js.onload = init;
-            document.head.appendChild(js);
-          }
-
-          function init() {
-            if (window.Calendly && parent) {
-              window.Calendly.initInlineWidget({
-                url: url,
-                parentElement: parent,
-                pageSettings: {
-                  backgroundColor: '080808',
-                  textColor: 'ffffff',
-                  primaryColor: '0055FE',
-                  hideEventTypeDetails: true,
-                  hideGdprBanner: true,
-                  hideLandingPageDetails: true
-                }
-              });
-            } else {
-              setTimeout(init, 200);
-            }
-          }
-
-          // Defer asset loading until the browser is idle, so the rest of the page
-          // becomes interactive first. Fallback to a short timeout on Safari.
-          function defer() {
-            if ('requestIdleCallback' in window) {
-              window.requestIdleCallback(injectAssets, { timeout: 3000 });
-            } else {
-              setTimeout(injectAssets, 1500);
-            }
-          }
-          if (document.readyState === 'complete') defer();
-          else window.addEventListener('load', defer);
-        })();
-      </script>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </div>
   </section>
 
