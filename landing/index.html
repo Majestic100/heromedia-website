@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book et gratis strategimøde | Hero Media</title>
+  <meta name="description" content="Book et gratis, uforpligtende strategimøde med Hero Media. 30 minutter, hvor vi finder de største muligheder i din markedsføring og viser dig, hvordan du konverterer flere besøgende til kunder." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css?v=34" />
+
+  <!-- Calendly -->
+  <link rel="preconnect" href="https://assets.calendly.com" />
+  <link rel="preconnect" href="https://calendly.com" crossorigin />
+
+  <style>
+    /* ===== Landing-page specific ===== */
+    .lp-nav { position: absolute; top: 16px; left: 0; right: 0; z-index: 50; }
+    .lp-nav .container { display: flex; align-items: center; justify-content: space-between; }
+    .lp-nav .logo { font-family: 'Barlow', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.04em; }
+    .lp-nav .btn { padding: 9px 18px; font-size: 0.86rem; }
+
+    .lp-hero { padding: 130px 0 64px; position: relative; overflow: hidden; }
+    .lp-hero::before {
+      content: ''; position: absolute; top: -160px; left: 50%; transform: translateX(-50%);
+      width: 760px; height: 760px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,85,254,0.20), transparent 60%);
+      filter: blur(20px); pointer-events: none; z-index: -1;
+    }
+    .lp-hero-head { text-align: center; max-width: 780px; margin: 0 auto 34px; }
+    .lp-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px;
+      padding: 6px 14px; border-radius: 999px; font-size: 0.8rem; color: var(--text-soft);
+      background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+    }
+    .lp-eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #2ecc71; box-shadow: 0 0 10px #2ecc71; }
+    .lp-hero-head h1 { font-size: clamp(2.2rem, 5vw, 3.7rem); line-height: 1.04; margin-bottom: 18px; }
+    .lp-hero-head h1 .accent { color: var(--accent); }
+    .lp-lead { color: var(--text-muted); font-size: clamp(1.05rem, 1.4vw, 1.25rem); line-height: 1.55; margin: 0 auto 26px; max-width: 640px; }
+    .lp-trust-row { display: flex; justify-content: center; }
+
+    .lp-cal-wrap {
+      max-width: 1000px; margin: 0 auto; border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--border); background: rgba(255,255,255,0.02);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+    }
+    .calendly-inline-widget { min-width: 320px; height: 720px; }
+
+    .lp-section { padding: 72px 0; position: relative; }
+    .lp-section .section-head { margin-bottom: 38px; }
+
+    .lp-final { text-align: center; padding: 96px 0 40px; }
+    .lp-final h2 { margin-bottom: 14px; }
+    .lp-final p { color: var(--text-muted); max-width: 540px; margin: 0 auto 28px; }
+
+    .lp-footer { border-top: 1px solid var(--border); padding: 30px 0; }
+    .lp-footer .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 0.86rem; color: var(--text-dim); }
+    .lp-footer a { color: var(--text-muted); }
+    .lp-footer a:hover { color: var(--text); }
+
+    @media (max-width: 640px) {
+      .lp-hero { padding: 100px 0 48px; }
+      .lp-section { padding: 52px 0; }
+      .lp-final { padding: 64px 0 32px; }
+      .calendly-inline-widget { height: 760px; }
+      .lp-nav .btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated background video (same ambient look as the main site) -->
+  <div class="bg-video-wrap" aria-hidden="true">
+    <video class="bg-video" src="../assets/bg-animation.mp4" autoplay loop muted playsinline preload="auto"></video>
+    <div class="bg-video-tint"></div>
+  </div>
+
+  <!-- ===== Minimal nav ===== -->
+  <header class="lp-nav">
+    <div class="container">
+      <a href="../" class="logo">HERO<span>MEDIA</span></a>
+      <a href="#book" class="btn btn-primary">Book gratis møde</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO + Calendly (above the fold) ===== -->
+  <section class="lp-hero" id="book">
+    <div class="container">
+      <div class="lp-hero-head">
+        <span class="lp-eyebrow"><span class="dot"></span> Gratis &amp; uforpligtende · 30 minutter</span>
+        <h1>Book et gratis strategimøde – og få en <span class="accent">konkret plan</span> for din vækst.</h1>
+        <p class="lp-lead">På 30 minutter dykker vi ned i din markedsføring, finder de største muligheder og viser dig præcis, hvordan du konverterer flere besøgende til kunder. Ingen forpligtelser – bare værdi.</p>
+        <div class="lp-trust-row">
+          <a href="https://www.trustpilot.com/review/heromedia.dk" target="_blank" rel="noopener" class="trust-badge">
+            <div class="trust-stars">
+              <span class="trust-star"></span><span class="trust-star"></span><span class="trust-star"></span><span class="trust-star"></span><span class="trust-star"></span>
+            </div>
+            <div class="trust-copy">
+              <div class="trust-rating"><strong>4.7</strong> <span>fra</span></div>
+              <div class="trust-line">+30 brands på <span class="trust-brand">★ Trustpilot</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Calendly inline widget -->
+      <div class="lp-cal-wrap">
+        <div class="calendly-inline-widget"
+             data-url="https://calendly.com/inkflow-/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0055fe">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why book (USPs) ===== -->
+  <section class="lp-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">• Derfor booker du et møde</span>
+        <h2>Hvad du får ud af samarbejdet</h2>
+        <p>Ingen tomme løfter – kun en partner, der er lige så optaget af din bundlinje, som du er.</p>
+      </div>
+      <ul class="contact-usps" aria-label="Derfor booker du">
+        <li class="contact-usp">
+          <span class="contact-usp-icon">⏱</span>
+          <div>
+            <h4>0 måneders binding</h4>
+            <p>Måned-til-måned-samarbejde. Opsig når som helst. Vi fortjener fornyelsen med resultater – ikke med kontrakter.</p>
+          </div>
+        </li>
+        <li class="contact-usp">
+          <span class="contact-usp-icon">📈</span>
+          <div>
+            <h4>Handling frem for ord</h4>
+            <p>Profit er indbygget i hver kampagne. Vi optimerer for omsætning og vækst – ikke forfængelige tal.</p>
+          </div>
+        </li>
+        <li class="contact-usp">
+          <span class="contact-usp-icon">🎯</span>
+          <div>
+            <h4>Senior team, direkte</h4>
+            <p>Du arbejder direkte med de strateger, der bygger planen. Ingen overdragelse til juniorer.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Results / stats ===== -->
+  <section class="lp-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">• Dokumenterede resultater</span>
+        <h2>Tal, der taler for sig selv</h2>
+        <p>Rigtige kampagner. Rigtig omsætning. Rigtige brands, der satser på os – og vinder.</p>
+      </div>
+      <div class="results-aggregate">
+        <div class="results-stat">
+          <div class="results-stat-row">
+            <span class="results-stat-prefix">€</span>
+            <span class="results-stat-value" data-count="8.2" data-suffix="M+">0</span>
+          </div>
+          <span class="results-stat-label">Genereret omsætning</span>
+        </div>
+        <div class="results-stat">
+          <div class="results-stat-row">
+            <span class="results-stat-value" data-count="240" data-suffix="%">0</span>
+          </div>
+          <span class="results-stat-label">Gns. leadvækst</span>
+        </div>
+        <div class="results-stat">
+          <div class="results-stat-row">
+            <span class="results-stat-value" data-count="3.6" data-suffix="x">0</span>
+          </div>
+          <span class="results-stat-label">Gns. ROAS</span>
+        </div>
+        <div class="results-stat">
+          <div class="results-stat-row">
+            <span class="results-stat-value" data-count="40" data-suffix="+">0</span>
+          </div>
+          <span class="results-stat-label">Brands betjent</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Logos ===== -->
+  <section class="brand-marquee-section">
+    <div class="container">
+      <div class="brand-head">
+        <span class="brand-tag-dot"></span>
+        <span>Brands i vækst på <strong>10+ markeder</strong> stoler på os</span>
+      </div>
+    </div>
+    <div class="brand-marquee">
+      <div class="brand-track">
+        <img class="brand-logo" src="../assets/logos/Akutflyt.png" alt="Akutflyt" />
+        <img class="brand-logo" src="../assets/logos/Bioprai.png" alt="Bioprai" />
+        <img class="brand-logo" src="../assets/logos/Bouquet design.png" alt="Bouquet Design" />
+        <img class="brand-logo" src="../assets/logos/Clinic360.png" alt="Clinic360" />
+        <img class="brand-logo" src="../assets/logos/Customoffice.png" alt="Custom Office" />
+        <img class="brand-logo" src="../assets/logos/Delsoux.png" alt="DelsouX" />
+        <img class="brand-logo" src="../assets/logos/Fimmi.png" alt="Fimmi" />
+        <img class="brand-logo" src="../assets/logos/Hidayah.png" alt="Hidayah" />
+        <img class="brand-logo" src="../assets/logos/Magictouch.png" alt="Magic Touch" />
+        <img class="brand-logo" src="../assets/logos/Parfumelab.png" alt="ParfumeLab" />
+        <img class="brand-logo" src="../assets/logos/SSKIN Copenhagen.png" alt="SSKIN Copenhagen" />
+        <img class="brand-logo" src="../assets/logos/Vanilia.png" alt="Vanilia" />
+        <img class="brand-logo" src="../assets/logos/VSF.png" alt="Vores Fitness Silkeborg" />
+        <!-- duplicate for seamless loop -->
+        <img class="brand-logo" src="../assets/logos/Akutflyt.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/Bioprai.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/Bouquet design.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/Clinic360.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/Customoffice.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/Delsoux.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/Fimmi.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/Hidayah.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/Magictouch.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/Parfumelab.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/SSKIN Copenhagen.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/Vanilia.png" alt="" aria-hidden="true" />
+        <img class="brand-logo" src="../assets/logos/VSF.png" alt="" aria-hidden="true" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Reviews ===== -->
+  <section class="lp-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">• Anbefalinger</span>
+        <h2>Hvad vores kunder siger</h2>
+        <p>Hør fra de virksomheder, vi har hjulpet med at vokse.</p>
+      </div>
+      <div class="review-grid">
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Sinan er utrolig venlig og hjælpsom. Han har en professionel og dynamisk tilgang til sit arbejde og den tekniske indsigt til at hjælpe din virksomhed med at vokse og nå din målgruppe. Det, der virkelig adskiller Sinan fra andre, er, at han investerer sig selv i din virksomhed og ofte bruger vendinger som 'vi', hvilket får det til at føles, som om han er en del af dit team. Vi anbefaler Sinan og Hero Media på det varmeste!"</p>
+          <div class="review-meta">
+            <strong>Rebecca Jensen</strong>
+            <span>CEO &amp; partner · Vores Fitness Silkeborg</span>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Hero Media med Sinan i spidsen har gjort underværker for DelsouX. De har hjulpet os med at vækste både salg og brandkendskab og samtidig sikret, at vores brandudtryk flugter med vores vision. Leder du efter et pålideligt og detaljeorienteret team, der virkelig føles som en partner, anbefaler vi varmt Sinan og Hero Media!"</p>
+          <div class="review-meta">
+            <strong>Qais Delsouz</strong>
+            <span>CEO &amp; stifter · DelsouX</span>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Sinan har været afgørende for Car Manias succes. Hans ekspertise inden for paid social på Facebook, Instagram og TikTok har været i særklasse. Hero Media er resultatorienteret og fuldt dedikeret til vores vækst. Kan varmt anbefales. Tak, Hero Media!"</p>
+          <div class="review-meta">
+            <strong>Omar Hussein</strong>
+            <span>Stifter · Car Mania</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Final CTA ===== -->
+  <section class="lp-final">
+    <div class="container">
+      <span class="section-tag">• Klar når du er</span>
+      <h2>Klar til at vækste din forretning?</h2>
+      <p>Book dit gratis strategimøde nu – så tager vi den derfra. Ingen forpligtelser, bare en god samtale om dine muligheder.</p>
+      <a href="#book" class="btn btn-primary">Book dit gratis møde</a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="lp-footer">
+    <div class="container">
+      <span>© 2026 Hero Media · Lavet med omtanke i Danmark</span>
+      <a href="../">← Tilbage til heromedia.dk</a>
+    </div>
+  </footer>
+
+  <!-- Calendly embed -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+  <!-- Lightweight interactions: count-up stats + reveal on scroll -->
+  <script>
+    // Count-up for [data-count] stats
+    var counterObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        var target = parseFloat(el.dataset.count);
+        var suffix = el.dataset.suffix || '';
+        var decimals = (el.dataset.count.split('.')[1] || '').length;
+        var duration = 2200, start = performance.now();
+        function step(now) {
+          var t = Math.min(1, (now - start) / duration);
+          var eased = 1 - Math.pow(1 - t, 4);
+          el.textContent = (target * eased).toFixed(decimals) + suffix;
+          if (t < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        counterObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-count]').forEach(function (c) { counterObs.observe(c); });
+
+    // Reveal sections on scroll (added via JS so content stays visible without JS)
+    var reveal = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); reveal.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.lp-section, .lp-final, .brand-marquee-section').forEach(function (s) {
+      s.classList.add('fade-in'); reveal.observe(s);
+    });
+  </script>
+</body>
+</html>
