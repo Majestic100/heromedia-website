@@ -21,6 +21,17 @@
     src="https://www.facebook.com/tr?id=847588475907012&ev=PageView&noscript=1" alt="" /></noscript>
   <!-- End Meta Pixel Code -->
 
+  <!-- Track Calendly bookings as a Schedule conversion (deduped with the server-side CAPI event via event_id) -->
+  <script>
+    window.addEventListener('message', function (e) {
+      if (e && e.data && e.data.event === 'calendly.event_scheduled' && typeof fbq === 'function') {
+        var p = e.data.payload || {};
+        var eid = (p.invitee && p.invitee.uri) || (p.event && p.event.uri) || undefined;
+        fbq('track', 'Schedule', {}, eid ? { eventID: eid } : {});
+      }
+    });
+  </script>
+
   <title data-i18n="meta.title">Hero Media | We Help the Ambitious Outperform the Average</title>
   <meta name="description" data-i18n-content="meta.description" content="Hero Media is a premium digital marketing agency helping ambitious businesses grow online with measurable results." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />

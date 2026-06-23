@@ -21,6 +21,17 @@
     src="https://www.facebook.com/tr?id=847588475907012&ev=PageView&noscript=1" alt="" /></noscript>
   <!-- End Meta Pixel Code -->
 
+  <!-- Track Calendly bookings as a Schedule conversion (deduped with the server-side CAPI event via event_id) -->
+  <script>
+    window.addEventListener('message', function (e) {
+      if (e && e.data && e.data.event === 'calendly.event_scheduled' && typeof fbq === 'function') {
+        var p = e.data.payload || {};
+        var eid = (p.invitee && p.invitee.uri) || (p.event && p.event.uri) || undefined;
+        fbq('track', 'Schedule', {}, eid ? { eventID: eid } : {});
+      }
+    });
+  </script>
+
   <title>Book en gratis vækstsamtale | Hero Media</title>
   <meta name="description" content="Book en gratis, uforpligtende vækstsamtale med Hero Media. På 30 minutter dykker vi ned i din creative strategy, dit content og din tekstforfatning og fortæller dig, hvad du kan gøre bedre for at få flere kunder." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
