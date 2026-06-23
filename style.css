@@ -424,6 +424,40 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
   border-radius: 2px;
 }
 
+/* ============== NAV RIGHT CLUSTER + LANGUAGE SWITCH ============== */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.lang-opt {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 9px;
+  border-radius: 999px;
+  line-height: 1;
+  transition: color .2s, background .2s;
+}
+.lang-opt:hover { color: #fff; }
+.lang-opt.is-active { color: #000; background: #fff; }
+
 /* ============== HERO (Silberg-inspired) ============== */
 .hero {
   padding: 200px 0 140px;
@@ -1092,6 +1126,9 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
   .logo span { padding: 1px 5px; }
   .hamburger { width: 30px; height: 30px; }
   .hamburger span { width: 16px; }
+  .nav-right { gap: 8px; }
+  .lang-switch { padding: 2px; }
+  .lang-opt { padding: 4px 7px; font-size: 0.68rem; }
 }
 
 /* ============== MOBILE NAV (when open) ============== */

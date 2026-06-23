@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hero Media | We Help the Ambitious Outperform the Average</title>
-  <meta name="description" content="Hero Media is a premium digital marketing agency helping ambitious businesses grow online with measurable results." />
+  <title data-i18n="meta.title">Hero Media | We Help the Ambitious Outperform the Average</title>
+  <meta name="description" data-i18n-content="meta.description" content="Hero Media is a premium digital marketing agency helping ambitious businesses grow online with measurable results." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=28" />
+  <link rel="stylesheet" href="style.css?v=29" />
 
   <!-- Wistia hero video player -->
   <script src="https://fast.wistia.com/player.js" async></script>
@@ -34,14 +34,20 @@
     <div class="container nav-inner">
       <a href="#" class="logo">HERO<span>MEDIA</span></a>
       <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#cases">Cases</a>
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About Us</a>
+        <a href="#cases" data-i18n="nav.cases">Cases</a>
       </nav>
-      <a href="#contact" class="btn btn-primary nav-cta">Let's Grow Your Bottom Line</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <div class="lang-switch" role="group" aria-label="Language / Sprog">
+          <button type="button" class="lang-opt is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-opt" data-lang="da" aria-pressed="false">DA</button>
+        </div>
+        <a href="#contact" class="btn btn-primary nav-cta" data-i18n="nav.cta">Let's Grow Your Bottom Line</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -49,14 +55,14 @@
   <section class="hero" id="home">
     <div class="container hero-grid">
       <div class="hero-text">
-        <h1>
+        <h1 data-i18n-html="hero.title">
           We help the <span class="muted">ambitious outperform</span> the average.
         </h1>
-        <p class="hero-sub">
+        <p class="hero-sub" data-i18n="hero.sub">
           Conversion-first digital marketing. We craft the strategies, build the funnels and create the content that actually moves the needle, so your brand grows where it matters most: the bottom line.
         </p>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Book a Free Discovery Call</a>
+          <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Book a Free Discovery Call</a>
         </div>
         <a href="https://www.trustpilot.com/review/heromedia.dk" target="_blank" rel="noopener" class="trust-badge">
           <div class="trust-stars">
@@ -67,8 +73,8 @@
             <span class="trust-star"></span>
           </div>
           <div class="trust-copy">
-            <div class="trust-rating"><strong>4.7</strong> <span>from</span></div>
-            <div class="trust-line">+30 brands on <span class="trust-brand">★ Trustpilot</span></div>
+            <div class="trust-rating" data-i18n-html="trust.rating"><strong>4.7</strong> <span>from</span></div>
+            <div class="trust-line" data-i18n-html="trust.line">+30 brands on <span class="trust-brand">★ Trustpilot</span></div>
           </div>
         </a>
       </div>
@@ -88,7 +94,7 @@
     <div class="container">
       <div class="brand-head">
         <span class="brand-tag-dot"></span>
-        <span>Trusted by ambitious brands across <strong>10+ markets</strong></span>
+        <span data-i18n-html="brand.head">Trusted by ambitious brands across <strong>10+ markets</strong></span>
       </div>
     </div>
     <div class="brand-marquee">
@@ -131,38 +137,38 @@
         <img src="assets/about.jpg" alt="Hero Media at work" onerror="this.style.background='linear-gradient(135deg,#1a1a2e,#0d0d18)';this.removeAttribute('src');" />
       </div>
       <div class="about-text">
-        <span class="section-tag">• About Hero Media</span>
-        <h2>The choice for ambitious businesses to grow online.</h2>
-        <p>
+        <span class="section-tag" data-i18n="about.tag">• About Hero Media</span>
+        <h2 data-i18n="about.title">The choice for ambitious businesses to grow online.</h2>
+        <p data-i18n="about.body">
           We help ambitious businesses grow their online presence with a clear focus on delivering measurable results. Everything we create is designed to move your brand forward.
         </p>
         <div class="markets">
           <div class="markets-head">
             <span class="markets-dot"></span>
-            <span class="markets-label">Live across <strong>10+ markets</strong></span>
+            <span class="markets-label" data-i18n-html="markets.label">Live across <strong>10+ markets</strong></span>
           </div>
           <div class="markets-marquee">
             <div class="markets-track">
-              <span class="flag-chip"><span class="flag">🇩🇰</span>Denmark</span>
-              <span class="flag-chip"><span class="flag">🇳🇴</span>Norway</span>
-              <span class="flag-chip"><span class="flag">🇸🇪</span>Sweden</span>
-              <span class="flag-chip"><span class="flag">🇳🇱</span>Netherlands</span>
-              <span class="flag-chip"><span class="flag">🇹🇷</span>Turkey</span>
-              <span class="flag-chip"><span class="flag">🇦🇪</span>UAE</span>
-              <span class="flag-chip"><span class="flag">🇺🇸</span>USA</span>
-              <span class="flag-chip"><span class="flag">🇫🇮</span>Finland</span>
-              <span class="flag-chip"><span class="flag">🇩🇪</span>Germany</span>
-              <span class="flag-chip"><span class="flag">🇧🇪</span>Belgium</span>
-              <span class="flag-chip"><span class="flag">🇩🇰</span>Denmark</span>
-              <span class="flag-chip"><span class="flag">🇳🇴</span>Norway</span>
-              <span class="flag-chip"><span class="flag">🇸🇪</span>Sweden</span>
-              <span class="flag-chip"><span class="flag">🇳🇱</span>Netherlands</span>
-              <span class="flag-chip"><span class="flag">🇹🇷</span>Turkey</span>
-              <span class="flag-chip"><span class="flag">🇦🇪</span>UAE</span>
-              <span class="flag-chip"><span class="flag">🇺🇸</span>USA</span>
-              <span class="flag-chip"><span class="flag">🇫🇮</span>Finland</span>
-              <span class="flag-chip"><span class="flag">🇩🇪</span>Germany</span>
-              <span class="flag-chip"><span class="flag">🇧🇪</span>Belgium</span>
+              <span class="flag-chip"><span class="flag">🇩🇰</span><span data-i18n="country.dk">Denmark</span></span>
+              <span class="flag-chip"><span class="flag">🇳🇴</span><span data-i18n="country.no">Norway</span></span>
+              <span class="flag-chip"><span class="flag">🇸🇪</span><span data-i18n="country.se">Sweden</span></span>
+              <span class="flag-chip"><span class="flag">🇳🇱</span><span data-i18n="country.nl">Netherlands</span></span>
+              <span class="flag-chip"><span class="flag">🇹🇷</span><span data-i18n="country.tr">Turkey</span></span>
+              <span class="flag-chip"><span class="flag">🇦🇪</span><span data-i18n="country.ae">UAE</span></span>
+              <span class="flag-chip"><span class="flag">🇺🇸</span><span data-i18n="country.us">USA</span></span>
+              <span class="flag-chip"><span class="flag">🇫🇮</span><span data-i18n="country.fi">Finland</span></span>
+              <span class="flag-chip"><span class="flag">🇩🇪</span><span data-i18n="country.de">Germany</span></span>
+              <span class="flag-chip"><span class="flag">🇧🇪</span><span data-i18n="country.be">Belgium</span></span>
+              <span class="flag-chip"><span class="flag">🇩🇰</span><span data-i18n="country.dk">Denmark</span></span>
+              <span class="flag-chip"><span class="flag">🇳🇴</span><span data-i18n="country.no">Norway</span></span>
+              <span class="flag-chip"><span class="flag">🇸🇪</span><span data-i18n="country.se">Sweden</span></span>
+              <span class="flag-chip"><span class="flag">🇳🇱</span><span data-i18n="country.nl">Netherlands</span></span>
+              <span class="flag-chip"><span class="flag">🇹🇷</span><span data-i18n="country.tr">Turkey</span></span>
+              <span class="flag-chip"><span class="flag">🇦🇪</span><span data-i18n="country.ae">UAE</span></span>
+              <span class="flag-chip"><span class="flag">🇺🇸</span><span data-i18n="country.us">USA</span></span>
+              <span class="flag-chip"><span class="flag">🇫🇮</span><span data-i18n="country.fi">Finland</span></span>
+              <span class="flag-chip"><span class="flag">🇩🇪</span><span data-i18n="country.de">Germany</span></span>
+              <span class="flag-chip"><span class="flag">🇧🇪</span><span data-i18n="country.be">Belgium</span></span>
             </div>
           </div>
         </div>
@@ -176,31 +182,31 @@
     <div class="framer-bg-glow"></div>
     <div class="container">
       <h2 class="framer-heading">
-        We help ambitious brands turn ad spend into growth that
+        <span data-i18n="framer.heading.lead">We help ambitious brands turn ad spend into growth that</span>
         <span class="framer-rotator">
-          <span class="framer-rotator-word is-active">stands out.</span>
-          <span class="framer-rotator-word">scales fast.</span>
-          <span class="framer-rotator-word">dominates.</span>
-          <span class="framer-rotator-word">converts.</span>
+          <span class="framer-rotator-word is-active" data-i18n="framer.rotator.1">stands out.</span>
+          <span class="framer-rotator-word" data-i18n="framer.rotator.2">scales fast.</span>
+          <span class="framer-rotator-word" data-i18n="framer.rotator.3">dominates.</span>
+          <span class="framer-rotator-word" data-i18n="framer.rotator.4">converts.</span>
         </span>
       </h2>
 
       <div class="framer-trust">
-        <span class="framer-trust-label">Working with brands in</span>
+        <span class="framer-trust-label" data-i18n="framer.trust.label">Working with brands in</span>
         <div class="framer-trust-items">
-          <span class="framer-trust-item">🇩🇰 Denmark</span>
+          <span class="framer-trust-item" data-i18n="framer.trust.dk">🇩🇰 Denmark</span>
           <span class="framer-trust-divider"></span>
-          <span class="framer-trust-item">🇸🇪 Sweden</span>
+          <span class="framer-trust-item" data-i18n="framer.trust.se">🇸🇪 Sweden</span>
           <span class="framer-trust-divider"></span>
-          <span class="framer-trust-item">🇳🇴 Norway</span>
+          <span class="framer-trust-item" data-i18n="framer.trust.no">🇳🇴 Norway</span>
           <span class="framer-trust-divider"></span>
-          <span class="framer-trust-item">🇳🇱 Netherlands</span>
+          <span class="framer-trust-item" data-i18n="framer.trust.nl">🇳🇱 Netherlands</span>
           <span class="framer-trust-divider"></span>
-          <span class="framer-trust-item">🇺🇸 USA</span>
+          <span class="framer-trust-item" data-i18n="framer.trust.us">🇺🇸 USA</span>
           <span class="framer-trust-divider"></span>
-          <span class="framer-trust-item">🇦🇪 UAE</span>
+          <span class="framer-trust-item" data-i18n="framer.trust.ae">🇦🇪 UAE</span>
           <span class="framer-trust-divider"></span>
-          <span class="framer-trust-item">+ 4 more</span>
+          <span class="framer-trust-item" data-i18n="framer.trust.more">+ 4 more</span>
         </div>
       </div>
 
@@ -208,25 +214,25 @@
         <div class="framer-stat">
           <div class="framer-num"><span class="framer-count" data-count="1.96" data-suffix="M" data-live="true">0</span></div>
           <div class="framer-bar"><span></span></div>
-          <div class="framer-label">USD ad spend across 10 international markets</div>
+          <div class="framer-label" data-i18n="framer.stat.1">USD ad spend across 10 international markets</div>
         </div>
         <div class="framer-stat">
           <div class="framer-num"><span class="framer-count" data-count="5" data-suffix="">0</span><span class="framer-plus">+</span></div>
           <div class="framer-bar"><span></span></div>
-          <div class="framer-label">Years of Experience</div>
+          <div class="framer-label" data-i18n="framer.stat.2">Years of Experience</div>
         </div>
         <div class="framer-stat">
           <div class="framer-num"><span class="framer-count" data-count="91" data-suffix="K" data-live="true">0</span></div>
           <div class="framer-bar"><span></span></div>
-          <div class="framer-label">USD monthly ad spend managed worldwide</div>
+          <div class="framer-label" data-i18n="framer.stat.3">USD monthly ad spend managed worldwide</div>
         </div>
       </div>
 
       <div class="framer-meta">
         <span class="framer-meta-dot"></span>
-        <span>Updates every <strong>5 minutes</strong></span>
+        <span data-i18n-html="framer.meta.updates">Updates every <strong>5 minutes</strong></span>
         <span class="framer-meta-sep"></span>
-        <span>Last synced <strong>1 May 2026</strong></span>
+        <span data-i18n-html="framer.meta.synced">Last synced <strong>1 May 2026</strong></span>
       </div>
     </div>
   </section>
@@ -235,19 +241,19 @@
   <section class="cases" id="cases">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">• Results</span>
-        <h2>Selected Cases</h2>
-        <p>A snapshot of what happens when ambition meets execution.</p>
+        <span class="section-tag" data-i18n="cases.tag">• Results</span>
+        <h2 data-i18n="cases.title">Selected Cases</h2>
+        <p data-i18n="cases.sub">A snapshot of what happens when ambition meets execution.</p>
       </div>
       <div class="case-grid">
         <article class="case-card">
           <div class="case-img" style="background-image:url('assets/case-1.jpg')"></div>
           <div class="case-body">
             <h3>Tattoo Fashion Rødovre</h3>
-            <p>Scaled bookings for a premium tattoo studio with funnel optimization and local-targeted ads.</p>
+            <p data-i18n="case.1.desc">Scaled bookings for a premium tattoo studio with funnel optimization and local-targeted ads.</p>
             <div class="case-metrics">
-              <span>184% More Bookings</span>
-              <span>3.4x Lead Volume</span>
+              <span data-i18n="case.1.m1">184% More Bookings</span>
+              <span data-i18n="case.1.m2">3.4x Lead Volume</span>
             </div>
           </div>
         </article>
@@ -255,10 +261,10 @@
           <div class="case-img" style="background-image:url('assets/case-2.jpg')"></div>
           <div class="case-body">
             <h3>Hidayah</h3>
-            <p>Boosted customer engagement with a digital presence and targeted campaigns.</p>
+            <p data-i18n="case.2.desc">Boosted customer engagement with a digital presence and targeted campaigns.</p>
             <div class="case-metrics">
-              <span>151% Increased Traffic</span>
-              <span>262% Growth in Sales</span>
+              <span data-i18n="case.2.m1">151% Increased Traffic</span>
+              <span data-i18n="case.2.m2">262% Growth in Sales</span>
             </div>
           </div>
         </article>
@@ -266,10 +272,10 @@
           <div class="case-img" style="background-image:url('assets/case-3.jpg'); background-position: center 25%;"></div>
           <div class="case-body">
             <h3>Clinic360</h3>
-            <p>Built a new website and grew their presence through ads tailored to their audience.</p>
+            <p data-i18n="case.3.desc">Built a new website and grew their presence through ads tailored to their audience.</p>
             <div class="case-metrics">
-              <span>57% Website Visitors</span>
-              <span>92% Added Revenue</span>
+              <span data-i18n="case.3.m1">57% Website Visitors</span>
+              <span data-i18n="case.3.m2">92% Added Revenue</span>
             </div>
           </div>
         </article>
@@ -277,10 +283,10 @@
           <div class="case-img" style="background-image:url('assets/case-4.jpg')"></div>
           <div class="case-body">
             <h3>ParfumeLab</h3>
-            <p>Elevated the brand with paid social and conversion-driven creatives, scaling spend profitably.</p>
+            <p data-i18n="case.4.desc">Elevated the brand with paid social and conversion-driven creatives, scaling spend profitably.</p>
             <div class="case-metrics">
-              <span>4.2x ROAS</span>
-              <span>118% Revenue Growth</span>
+              <span data-i18n="case.4.m1">4.2x ROAS</span>
+              <span data-i18n="case.4.m2">118% Revenue Growth</span>
             </div>
           </div>
         </article>
@@ -288,10 +294,10 @@
           <div class="case-img" style="background-image:url('assets/case-5.jpg')"></div>
           <div class="case-body">
             <h3>Vores Fitness Silkeborg</h3>
-            <p>Built a member-acquisition engine with lead funnels and retargeting that fills the gym.</p>
+            <p data-i18n="case.5.desc">Built a member-acquisition engine with lead funnels and retargeting that fills the gym.</p>
             <div class="case-metrics">
-              <span>240% More Memberships</span>
-              <span>67% Lower CPA</span>
+              <span data-i18n="case.5.m1">240% More Memberships</span>
+              <span data-i18n="case.5.m2">67% Lower CPA</span>
             </div>
           </div>
         </article>
@@ -299,10 +305,10 @@
           <div class="case-img" style="background-image:url('assets/case-6.jpg')"></div>
           <div class="case-body">
             <h3>DelsouX</h3>
-            <p>Launched a new webshop and scaled it with brand-aligned campaigns and CRO improvements.</p>
+            <p data-i18n="case.6.desc">Launched a new webshop and scaled it with brand-aligned campaigns and CRO improvements.</p>
             <div class="case-metrics">
-              <span>3.1x Online Sales</span>
-              <span>+92% Brand Awareness</span>
+              <span data-i18n="case.6.m1">3.1x Online Sales</span>
+              <span data-i18n="case.6.m2">+92% Brand Awareness</span>
             </div>
           </div>
         </article>
@@ -315,42 +321,42 @@
     <div class="container container-narrow process-grid">
       <div class="process-left">
         <div class="process-head">
-          <span class="section-tag">• How We Work?</span>
-          <h2>Chosen by Businesses<br />That Value <em>Action Over Words</em>.</h2>
-          <p>Profit isn't an afterthought. It's at the heart of every strategy and built into everything we do.</p>
+          <span class="section-tag" data-i18n="process.tag">• How We Work?</span>
+          <h2 data-i18n-html="process.title">Chosen by Businesses<br />That Value <em>Action Over Words</em>.</h2>
+          <p data-i18n="process.sub">Profit isn't an afterthought. It's at the heart of every strategy and built into everything we do.</p>
         </div>
         <div class="process-stages">
           <div class="stage">
             <div class="stage-head">
               <div class="stage-icon">💡</div>
-              <span class="stage-tag">Stage 1</span>
+              <span class="stage-tag" data-i18n="stage.1.tag">Stage 1</span>
             </div>
-            <h3>Creative Strategy</h3>
-            <p>We define the strategic direction that guides everything we do. Together we uncover your goals, audience, and unique positioning to develop a creative concept that sets the tone for your campaigns.</p>
+            <h3 data-i18n="stage.1.title">Creative Strategy</h3>
+            <p data-i18n="stage.1.body">We define the strategic direction that guides everything we do. Together we uncover your goals, audience, and unique positioning to develop a creative concept that sets the tone for your campaigns.</p>
           </div>
           <div class="stage">
             <div class="stage-head">
               <div class="stage-icon">⚛</div>
-              <span class="stage-tag">Stage 2</span>
+              <span class="stage-tag" data-i18n="stage.2.tag">Stage 2</span>
             </div>
-            <h3>Content</h3>
-            <p>We create the assets that bring your strategy to life. From copywriting to visuals, we craft content designed to engage your audience and communicate your message clearly and effectively.</p>
+            <h3 data-i18n="stage.2.title">Content</h3>
+            <p data-i18n="stage.2.body">We create the assets that bring your strategy to life. From copywriting to visuals, we craft content designed to engage your audience and communicate your message clearly and effectively.</p>
           </div>
           <div class="stage">
             <div class="stage-head">
               <div class="stage-icon">🔗</div>
-              <span class="stage-tag">Stage 3</span>
+              <span class="stage-tag" data-i18n="stage.3.tag">Stage 3</span>
             </div>
-            <h3>Funnels</h3>
-            <p>We design and build the full campaign engine, mapping out funnels, defining the campaign structure and setting up ads that guide your audience from first touchpoint to conversion.</p>
+            <h3 data-i18n="stage.3.title">Funnels</h3>
+            <p data-i18n="stage.3.body">We design and build the full campaign engine, mapping out funnels, defining the campaign structure and setting up ads that guide your audience from first touchpoint to conversion.</p>
           </div>
           <div class="stage">
             <div class="stage-head">
               <div class="stage-icon">✨</div>
-              <span class="stage-tag">Stage 4</span>
+              <span class="stage-tag" data-i18n="stage.4.tag">Stage 4</span>
             </div>
-            <h3>Post Production</h3>
-            <p>We refine and finalize every asset and campaign element, ensuring everything is polished, aligned, and ready to launch. Quality and consistency are at the heart of this final stage.</p>
+            <h3 data-i18n="stage.4.title">Post Production</h3>
+            <p data-i18n="stage.4.body">We refine and finalize every asset and campaign element, ensuring everything is polished, aligned, and ready to launch. Quality and consistency are at the heart of this final stage.</p>
           </div>
         </div>
       </div>
@@ -366,9 +372,9 @@
   <section class="results-showcase" id="results">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">• Proven Results</span>
-        <h2>Numbers That <em>Move Businesses</em> Forward.</h2>
-        <p>Real campaigns. Real revenue. Real brands betting on us, and winning.</p>
+        <span class="section-tag" data-i18n="results.tag">• Proven Results</span>
+        <h2 data-i18n-html="results.title">Numbers That <em>Move Businesses</em> Forward.</h2>
+        <p data-i18n="results.sub">Real campaigns. Real revenue. Real brands betting on us, and winning.</p>
       </div>
 
       <!-- Aggregate stats -->
@@ -378,25 +384,25 @@
             <span class="results-stat-prefix">€</span>
             <span class="results-stat-value" data-count="8.2" data-suffix="M+">0</span>
           </div>
-          <span class="results-stat-label">Revenue Generated</span>
+          <span class="results-stat-label" data-i18n="results.agg.revenue">Revenue Generated</span>
         </div>
         <div class="results-stat">
           <div class="results-stat-row">
             <span class="results-stat-value" data-count="240" data-suffix="%">0</span>
           </div>
-          <span class="results-stat-label">Avg Lead Growth</span>
+          <span class="results-stat-label" data-i18n="results.agg.leads">Avg Lead Growth</span>
         </div>
         <div class="results-stat">
           <div class="results-stat-row">
             <span class="results-stat-value" data-count="3.6" data-suffix="x">0</span>
           </div>
-          <span class="results-stat-label">Avg ROAS</span>
+          <span class="results-stat-label" data-i18n="results.agg.roas">Avg ROAS</span>
         </div>
         <div class="results-stat">
           <div class="results-stat-row">
             <span class="results-stat-value" data-count="40" data-suffix="+">0</span>
           </div>
-          <span class="results-stat-label">Brands Served</span>
+          <span class="results-stat-label" data-i18n="results.agg.brands">Brands Served</span>
         </div>
       </div>
 
@@ -406,75 +412,75 @@
           <article class="result-card">
             <span class="result-brand">Tattoo Fashion Rødovre</span>
             <span class="result-metric">+184<small>%</small></span>
-            <span class="result-headline">More bookings in 90 days</span>
-            <span class="result-tag">Beauty &amp; Wellness</span>
+            <span class="result-headline" data-i18n="result.r1.headline">More bookings in 90 days</span>
+            <span class="result-tag" data-i18n="result.r1.tag">Beauty &amp; Wellness</span>
           </article>
           <article class="result-card">
             <span class="result-brand">Hidayah</span>
             <span class="result-metric">+262<small>%</small></span>
-            <span class="result-headline">Sales growth post-launch</span>
-            <span class="result-tag">E-commerce</span>
+            <span class="result-headline" data-i18n="result.r2.headline">Sales growth post-launch</span>
+            <span class="result-tag" data-i18n="result.r2.tag">E-commerce</span>
           </article>
           <article class="result-card">
             <span class="result-brand">Clinic360</span>
             <span class="result-metric">+92<small>%</small></span>
-            <span class="result-headline">Added revenue from paid</span>
-            <span class="result-tag">Healthcare</span>
+            <span class="result-headline" data-i18n="result.r3.headline">Added revenue from paid</span>
+            <span class="result-tag" data-i18n="result.r3.tag">Healthcare</span>
           </article>
           <article class="result-card">
             <span class="result-brand">ParfumeLab</span>
             <span class="result-metric">4.2<small>x</small></span>
-            <span class="result-headline">ROAS scaled profitably</span>
-            <span class="result-tag">E-commerce</span>
+            <span class="result-headline" data-i18n="result.r4.headline">ROAS scaled profitably</span>
+            <span class="result-tag" data-i18n="result.r4.tag">E-commerce</span>
           </article>
           <article class="result-card">
             <span class="result-brand">Vores Fitness Silkeborg</span>
             <span class="result-metric">+240<small>%</small></span>
-            <span class="result-headline">More memberships, lower CPA</span>
-            <span class="result-tag">Fitness</span>
+            <span class="result-headline" data-i18n="result.r5.headline">More memberships, lower CPA</span>
+            <span class="result-tag" data-i18n="result.r5.tag">Fitness</span>
           </article>
           <article class="result-card">
             <span class="result-brand">DelsouX</span>
             <span class="result-metric">3.1<small>x</small></span>
-            <span class="result-headline">Online sales after relaunch</span>
-            <span class="result-tag">E-commerce</span>
+            <span class="result-headline" data-i18n="result.r6.headline">Online sales after relaunch</span>
+            <span class="result-tag" data-i18n="result.r6.tag">E-commerce</span>
           </article>
           <!-- Duplicate for seamless loop -->
           <article class="result-card" aria-hidden="true">
             <span class="result-brand">Tattoo Fashion Rødovre</span>
             <span class="result-metric">+184<small>%</small></span>
-            <span class="result-headline">More bookings in 90 days</span>
-            <span class="result-tag">Beauty &amp; Wellness</span>
+            <span class="result-headline" data-i18n="result.r1.headline">More bookings in 90 days</span>
+            <span class="result-tag" data-i18n="result.r1.tag">Beauty &amp; Wellness</span>
           </article>
           <article class="result-card" aria-hidden="true">
             <span class="result-brand">Hidayah</span>
             <span class="result-metric">+262<small>%</small></span>
-            <span class="result-headline">Sales growth post-launch</span>
-            <span class="result-tag">E-commerce</span>
+            <span class="result-headline" data-i18n="result.r2.headline">Sales growth post-launch</span>
+            <span class="result-tag" data-i18n="result.r2.tag">E-commerce</span>
           </article>
           <article class="result-card" aria-hidden="true">
             <span class="result-brand">Clinic360</span>
             <span class="result-metric">+92<small>%</small></span>
-            <span class="result-headline">Added revenue from paid</span>
-            <span class="result-tag">Healthcare</span>
+            <span class="result-headline" data-i18n="result.r3.headline">Added revenue from paid</span>
+            <span class="result-tag" data-i18n="result.r3.tag">Healthcare</span>
           </article>
           <article class="result-card" aria-hidden="true">
             <span class="result-brand">ParfumeLab</span>
             <span class="result-metric">4.2<small>x</small></span>
-            <span class="result-headline">ROAS scaled profitably</span>
-            <span class="result-tag">E-commerce</span>
+            <span class="result-headline" data-i18n="result.r4.headline">ROAS scaled profitably</span>
+            <span class="result-tag" data-i18n="result.r4.tag">E-commerce</span>
           </article>
           <article class="result-card" aria-hidden="true">
             <span class="result-brand">Vores Fitness Silkeborg</span>
             <span class="result-metric">+240<small>%</small></span>
-            <span class="result-headline">More memberships, lower CPA</span>
-            <span class="result-tag">Fitness</span>
+            <span class="result-headline" data-i18n="result.r5.headline">More memberships, lower CPA</span>
+            <span class="result-tag" data-i18n="result.r5.tag">Fitness</span>
           </article>
           <article class="result-card" aria-hidden="true">
             <span class="result-brand">DelsouX</span>
             <span class="result-metric">3.1<small>x</small></span>
-            <span class="result-headline">Online sales after relaunch</span>
-            <span class="result-tag">E-commerce</span>
+            <span class="result-headline" data-i18n="result.r6.headline">Online sales after relaunch</span>
+            <span class="result-tag" data-i18n="result.r6.tag">E-commerce</span>
           </article>
         </div>
       </div>
@@ -482,8 +488,8 @@
       <!-- Featured wins — bento mosaic -->
       <div class="results-bento">
         <div class="results-bento-head">
-          <span class="section-tag">• Featured Wins</span>
-          <h3>The Stories Behind <em>The Numbers</em>.</h3>
+          <span class="section-tag" data-i18n="results.featured.tag">• Featured Wins</span>
+          <h3 data-i18n-html="bento.head">The Stories Behind <em>The Numbers</em>.</h3>
         </div>
 
         <div class="bento-grid">
@@ -491,13 +497,13 @@
           <article class="bento-tile bento-hero" style="--tile-img: url('assets/case-1.jpg');">
             <div class="bento-tile-bg" aria-hidden="true"></div>
             <div class="bento-tile-content">
-              <span class="bento-eyebrow">Case 01 · Beauty &amp; Wellness</span>
+              <span class="bento-eyebrow" data-i18n="bento.hero.eyebrow">Case 01 · Beauty &amp; Wellness</span>
               <h4 class="bento-brand">Tattoo Fashion <span>Rødovre</span></h4>
-              <p class="bento-quote">"Bookings tripled in three months. We've never had a marketing partner that delivered this fast."</p>
+              <p class="bento-quote" data-i18n="bento.hero.quote">"Bookings tripled in three months. We've never had a marketing partner that delivered this fast."</p>
               <div class="bento-stats">
-                <div><strong>+184%</strong><span>Bookings</span></div>
-                <div><strong>3.4×</strong><span>Lead Volume</span></div>
-                <div><strong>67%</strong><span>Lower CPA</span></div>
+                <div><strong>+184%</strong><span data-i18n="bento.hero.s1">Bookings</span></div>
+                <div><strong>3.4×</strong><span data-i18n="bento.hero.s2">Lead Volume</span></div>
+                <div><strong>67%</strong><span data-i18n="bento.hero.s3">Lower CPA</span></div>
               </div>
             </div>
           </article>
@@ -508,8 +514,8 @@
             <div class="bento-metric-content">
               <span class="bento-eyebrow">ParfumeLab</span>
               <span class="bento-metric-big">4.2<small>×</small></span>
-              <span class="bento-metric-sub">Return on Ad Spend</span>
-              <p class="bento-metric-note">Brand-aligned creatives + CRO scaled spend without breaking margin.</p>
+              <span class="bento-metric-sub" data-i18n="bento.parfume.sub">Return on Ad Spend</span>
+              <p class="bento-metric-note" data-i18n="bento.parfume.note">Brand-aligned creatives + CRO scaled spend without breaking margin.</p>
             </div>
           </article>
 
@@ -519,18 +525,18 @@
             <div class="bento-tile-content bento-tile-content-overlay">
               <span class="bento-eyebrow">Vores Fitness Silkeborg</span>
               <span class="bento-metric-big">+240<small>%</small></span>
-              <span class="bento-metric-sub">More Memberships</span>
+              <span class="bento-metric-sub" data-i18n="bento.vsf.sub">More Memberships</span>
             </div>
           </article>
 
           <!-- Quote tile -->
           <article class="bento-tile bento-quote-tile">
             <span class="bento-quote-mark" aria-hidden="true">&ldquo;</span>
-            <p>Hero Media rebuilt our online presence from the ground up. Within months we saw a clear jump in inbound leads and added revenue. They truly <em>deliver</em>.</p>
+            <p data-i18n-html="bento.quote.text">Hero Media rebuilt our online presence from the ground up. Within months we saw a clear jump in inbound leads and added revenue. They truly <em>deliver</em>.</p>
             <div class="bento-attribution">
               <img class="bento-avatar" src="assets/clinic360-founder.png" alt="Clinic360 founder" />
               <div>
-                <strong>Founder</strong>
+                <strong data-i18n="bento.quote.role">Founder</strong>
                 <span>Clinic360</span>
               </div>
             </div>
@@ -540,11 +546,11 @@
           <article class="bento-tile bento-image bento-wide" style="--tile-img: url('assets/case-3.jpg');">
             <div class="bento-tile-bg" aria-hidden="true"></div>
             <div class="bento-tile-content bento-tile-content-overlay">
-              <span class="bento-eyebrow">Clinic360 · Healthcare</span>
+              <span class="bento-eyebrow" data-i18n="bento.wide.eyebrow">Clinic360 · Healthcare</span>
               <div class="bento-stats bento-stats-row">
-                <div><strong>+92%</strong><span>Added Revenue</span></div>
-                <div><strong>+57%</strong><span>Site Visitors</span></div>
-                <div><strong>2.8×</strong><span>Inbound Leads</span></div>
+                <div><strong>+92%</strong><span data-i18n="bento.wide.s1">Added Revenue</span></div>
+                <div><strong>+57%</strong><span data-i18n="bento.wide.s2">Site Visitors</span></div>
+                <div><strong>2.8×</strong><span data-i18n="bento.wide.s3">Inbound Leads</span></div>
               </div>
             </div>
           </article>
@@ -553,7 +559,7 @@
 
       <!-- Partner logo marquee -->
       <div class="results-partners">
-        <span class="results-partners-label">Trusted by ambitious brands</span>
+        <span class="results-partners-label" data-i18n="results.partners.label">Trusted by ambitious brands</span>
         <div class="results-partners-marquee">
           <div class="results-partners-track">
             <img src="assets/logos/Akutflyt.png" alt="Akutflyt" />
@@ -596,18 +602,18 @@
         <img src="assets/founder.jpg" alt="Sinan Akdag, Founder of Hero Media" onerror="this.style.background='linear-gradient(135deg,#1a1a2e,#0d0d18)';this.removeAttribute('src');" />
       </div>
       <div class="letter-text">
-        <span class="section-tag">• A letter from our founder</span>
+        <span class="section-tag" data-i18n="letter.tag">• A letter from our founder</span>
         <div class="letter-meta">
-          <p><strong>From:</strong> Sinan Akdag, founder of Hero Media</p>
-          <p><strong>Reply:</strong> What makes us different?</p>
+          <p data-i18n-html="letter.from"><strong>From:</strong> Sinan Akdag, founder of Hero Media</p>
+          <p data-i18n-html="letter.reply"><strong>Reply:</strong> What makes us different?</p>
         </div>
-        <p>If you're wondering why you should even consider working with us, I understand. The digital marketing world is full of bold guarantees, magic formulas, and promises of "5x ROAS" or "adding $10,000 to your business every month." You've probably heard it all before from people who claim to have cracked the code to scaling your business.</p>
-        <p>The truth is, there are no magic formulas. Long-lasting success starts with understanding your market, your business, and your customers, and building a plan that is as clear as it is bold. By focusing on what endures, not what fades, we lay the groundwork for growth that keeps compounding over time.</p>
-        <p>We're here to revolutionize the way businesses work with agencies. That's why we don't see ourselves as just another agency. We see ourselves as your in-house team, your company's right hand for advice, planning, and execution. We work closely with you to become a market leader in your industry.</p>
-        <p>We're not here to chase vanity numbers or promise instant results. Our goal is to create a well-thought-out strategy that ensures you not only grow but also stay strong in your market for years to come.</p>
-        <p>We don't believe in keeping clients bound by chains of long-term contracts. We let the results speak for themselves month after month. That's why many of our clients have stayed with us for years, not because they had to, but because they see the value we bring to their business.</p>
-        <p>Sign up for a meeting and let's see how we can help add value to your business.</p>
-        <p class="signature">Best regards,<br /><strong>Sinan Akdag</strong></p>
+        <p data-i18n="letter.p1">If you're wondering why you should even consider working with us, I understand. The digital marketing world is full of bold guarantees, magic formulas, and promises of "5x ROAS" or "adding $10,000 to your business every month." You've probably heard it all before from people who claim to have cracked the code to scaling your business.</p>
+        <p data-i18n="letter.p2">The truth is, there are no magic formulas. Long-lasting success starts with understanding your market, your business, and your customers, and building a plan that is as clear as it is bold. By focusing on what endures, not what fades, we lay the groundwork for growth that keeps compounding over time.</p>
+        <p data-i18n="letter.p3">We're here to revolutionize the way businesses work with agencies. That's why we don't see ourselves as just another agency. We see ourselves as your in-house team, your company's right hand for advice, planning, and execution. We work closely with you to become a market leader in your industry.</p>
+        <p data-i18n="letter.p4">We're not here to chase vanity numbers or promise instant results. Our goal is to create a well-thought-out strategy that ensures you not only grow but also stay strong in your market for years to come.</p>
+        <p data-i18n="letter.p5">We don't believe in keeping clients bound by chains of long-term contracts. We let the results speak for themselves month after month. That's why many of our clients have stayed with us for years, not because they had to, but because they see the value we bring to their business.</p>
+        <p data-i18n="letter.p6">Sign up for a meeting and let's see how we can help add value to your business.</p>
+        <p class="signature" data-i18n-html="letter.signature">Best regards,<br /><strong>Sinan Akdag</strong></p>
       </div>
     </div>
   </section>
@@ -616,57 +622,57 @@
   <section class="reviews">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">• Testimonials</span>
-        <h2>Customer Reviews</h2>
-        <p>Hear from our happy clients. See how we've helped them achieve their goals and create lasting impact.</p>
+        <span class="section-tag" data-i18n="reviews.tag">• Testimonials</span>
+        <h2 data-i18n="reviews.title">Customer Reviews</h2>
+        <p data-i18n="reviews.sub">Hear from our happy clients. See how we've helped them achieve their goals and create lasting impact.</p>
       </div>
       <div class="review-grid">
         <article class="review-card">
           <div class="stars">★★★★★</div>
-          <p>"Sinan is incredibly kind and helpful. He has a professional and dynamic approach to his work and the technical intelligence to help your business grow and reach your target audience. What truly sets Sinan apart from others is that he invests himself in your business, often using phrases like 'we,' which makes it feel like he is part of your team. We highly recommend Sinan and Hero Media!"</p>
+          <p data-i18n="review.1.body">"Sinan is incredibly kind and helpful. He has a professional and dynamic approach to his work and the technical intelligence to help your business grow and reach your target audience. What truly sets Sinan apart from others is that he invests himself in your business, often using phrases like 'we,' which makes it feel like he is part of your team. We highly recommend Sinan and Hero Media!"</p>
           <div class="review-meta">
             <strong>Rebecca Jensen</strong>
-            <span>CEO &amp; Partner · Vores Fitness Silkeborg</span>
+            <span data-i18n="review.1.role">CEO &amp; Partner · Vores Fitness Silkeborg</span>
           </div>
         </article>
         <article class="review-card">
           <div class="stars">★★★★★</div>
-          <p>"We have had a great collaboration with Hero Media and Sinan. He is professional, attentive and always brings thoughtful input that has helped us elevate our marketing. You can clearly feel his passion for his work. We highly recommend Hero Media!"</p>
+          <p data-i18n="review.2.body">"We have had a great collaboration with Hero Media and Sinan. He is professional, attentive and always brings thoughtful input that has helped us elevate our marketing. You can clearly feel his passion for his work. We highly recommend Hero Media!"</p>
           <div class="review-meta">
             <strong>Assad Mohammed</strong>
-            <span>CEO · ParfumeLab</span>
+            <span data-i18n="review.2.role">CEO · ParfumeLab</span>
           </div>
         </article>
         <article class="review-card">
           <div class="stars">★★★★★</div>
-          <p>"Working with Sinan from Hero Media has been a fantastic experience. He is professional, dedicated, and has had a significant impact on our growth. The collaboration has delivered remarkable results, and we look forward to continuing the journey together."</p>
+          <p data-i18n="review.3.body">"Working with Sinan from Hero Media has been a fantastic experience. He is professional, dedicated, and has had a significant impact on our growth. The collaboration has delivered remarkable results, and we look forward to continuing the journey together."</p>
           <div class="review-meta">
             <strong>Abdel Benyamin Hussein</strong>
-            <span>CEO · Hidayah</span>
+            <span data-i18n="review.3.role">CEO · Hidayah</span>
           </div>
         </article>
         <article class="review-card">
           <div class="stars">★★★★★</div>
-          <p>"Sinan has been an incredible help in planning and developing the ByAlisha webshop. He is not only skilled strategically and technically but also kind, patient and always ready to offer valuable advice when you need it. You truly feel supported and understood. I can highly recommend working with Sinan both as a person and as a professional. Thank you for everything, Sinan!"</p>
+          <p data-i18n="review.4.body">"Sinan has been an incredible help in planning and developing the ByAlisha webshop. He is not only skilled strategically and technically but also kind, patient and always ready to offer valuable advice when you need it. You truly feel supported and understood. I can highly recommend working with Sinan both as a person and as a professional. Thank you for everything, Sinan!"</p>
           <div class="review-meta">
             <strong>Alisha Khatoon</strong>
-            <span>Founder &amp; CEO · ByAlisha</span>
+            <span data-i18n="review.4.role">Founder &amp; CEO · ByAlisha</span>
           </div>
         </article>
         <article class="review-card">
           <div class="stars">★★★★★</div>
-          <p>"Hero Media with Sinan at the helm has worked wonders for DelsouX. They have helped us grow both sales and brand awareness while ensuring our brand expression aligns with our vision. HeroMedia supported us through the development of our new webshop, guiding us on how to make the most of our marketing efforts. If you're looking for a reliable and detail-oriented team that truly feels like a partner, we warmly recommend Sinan and Hero Media!"</p>
+          <p data-i18n="review.5.body">"Hero Media with Sinan at the helm has worked wonders for DelsouX. They have helped us grow both sales and brand awareness while ensuring our brand expression aligns with our vision. HeroMedia supported us through the development of our new webshop, guiding us on how to make the most of our marketing efforts. If you're looking for a reliable and detail-oriented team that truly feels like a partner, we warmly recommend Sinan and Hero Media!"</p>
           <div class="review-meta">
             <strong>Qais Delsouz</strong>
-            <span>CEO &amp; Founder · DelsouX</span>
+            <span data-i18n="review.5.role">CEO &amp; Founder · DelsouX</span>
           </div>
         </article>
         <article class="review-card">
           <div class="stars">★★★★★</div>
-          <p>"Sinan has been key to Car Mania's success. His expertise in paid social on Facebook, Instagram and TikTok has been outstanding. He quickly helped us find the right videographers and managed all content, which has been crucial in setting us apart from competitors. Hero Media is results-driven and fully committed to our growth. Highly recommended. Thank you, Hero Media!"</p>
+          <p data-i18n="review.6.body">"Sinan has been key to Car Mania's success. His expertise in paid social on Facebook, Instagram and TikTok has been outstanding. He quickly helped us find the right videographers and managed all content, which has been crucial in setting us apart from competitors. Hero Media is results-driven and fully committed to our growth. Highly recommended. Thank you, Hero Media!"</p>
           <div class="review-meta">
             <strong>Omar Hussein</strong>
-            <span>Founder · Car Mania</span>
+            <span data-i18n="review.6.role">Founder · Car Mania</span>
           </div>
         </article>
       </div>
@@ -677,31 +683,31 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">• Let's Talk</span>
-        <h2>Book a Discovery Call</h2>
-        <p>Pick a time that works for you. 30 minutes, no commitment, just a conversation.</p>
+        <span class="section-tag" data-i18n="contact.tag">• Let's Talk</span>
+        <h2 data-i18n="contact.title">Book a Discovery Call</h2>
+        <p data-i18n="contact.sub">Pick a time that works for you. 30 minutes, no commitment, just a conversation.</p>
       </div>
       <!-- USPs above Calendly -->
       <ul class="contact-usps" aria-label="Why book with us">
         <li class="contact-usp">
           <span class="contact-usp-icon">⏱</span>
           <div>
-            <h4>0 Months Binding</h4>
-            <p>Month-to-month partnership. Cancel anytime. We earn the renewal with results.</p>
+            <h4 data-i18n="usp.1.title">0 Months Binding</h4>
+            <p data-i18n="usp.1.body">Month-to-month partnership. Cancel anytime. We earn the renewal with results.</p>
           </div>
         </li>
         <li class="contact-usp">
           <span class="contact-usp-icon">📈</span>
           <div>
-            <h4>Action Over Words</h4>
-            <p>Profit is built into every campaign. We optimize for revenue, not vanity metrics.</p>
+            <h4 data-i18n="usp.2.title">Action Over Words</h4>
+            <p data-i18n="usp.2.body">Profit is built into every campaign. We optimize for revenue, not vanity metrics.</p>
           </div>
         </li>
         <li class="contact-usp">
           <span class="contact-usp-icon">🎯</span>
           <div>
-            <h4>Senior Team, Direct</h4>
-            <p>Work hands-on with the strategists who build the playbook. No junior handoffs.</p>
+            <h4 data-i18n="usp.3.title">Senior Team, Direct</h4>
+            <p data-i18n="usp.3.body">Work hands-on with the strategists who build the playbook. No junior handoffs.</p>
           </div>
         </li>
       </ul>
@@ -720,27 +726,27 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <div class="logo">HERO<span>MEDIA</span></div>
-        <p>We help the ambitious outperform the average.</p>
+        <p data-i18n="footer.tagline">We help the ambitious outperform the average.</p>
       </div>
       <div class="footer-col">
-        <h5>Navigation</h5>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#cases">Cases</a>
-        <a href="#contact">Contact</a>
+        <h5 data-i18n="footer.nav.head">Navigation</h5>
+        <a href="#home" data-i18n="footer.nav.home">Home</a>
+        <a href="#about" data-i18n="footer.nav.about">About Us</a>
+        <a href="#cases" data-i18n="footer.nav.cases">Cases</a>
+        <a href="#contact" data-i18n="footer.nav.contact">Contact</a>
       </div>
       <div class="footer-col">
-        <h5>Social</h5>
+        <h5 data-i18n="footer.social.head">Social</h5>
         <a href="https://www.facebook.com/Heromedia.dk" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.linkedin.com/company/heromedia-a" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
     <div class="footer-bottom container">
-      <span>© 2026 Hero Media</span>
-      <span>Made with care in Denmark</span>
+      <span data-i18n="footer.copyright">© 2026 Hero Media</span>
+      <span data-i18n="footer.made">Made with care in Denmark</span>
     </div>
   </footer>
 
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=11"></script>
 </body>
 </html>
