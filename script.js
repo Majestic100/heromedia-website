@@ -97,7 +97,7 @@ const I18N_DA = {
   'stage.1.title': 'Kreativ strategi',
   'stage.1.body': 'Vi definerer den strategiske retning, der styrer alt, hvad vi gør. Sammen afdækker vi dine mål, din målgruppe og din unikke positionering for at udvikle et kreativt koncept, der sætter tonen for dine kampagner.',
   'stage.2.tag': 'Fase 2',
-  'stage.2.title': 'Indhold',
+  'stage.2.title': 'Content',
   'stage.2.body': 'Vi skaber de assets, der bringer din strategi til live. Fra tekstforfatning til visuals udvikler vi indhold, der er designet til at engagere din målgruppe og kommunikere dit budskab klart og effektivt.',
   'stage.3.tag': 'Fase 3',
   'stage.3.title': 'Funnels',

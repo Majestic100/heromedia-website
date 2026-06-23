@@ -830,7 +830,7 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
   color: var(--text-muted);
 }
 .stage h3 { margin-bottom: 10px; }
-.stage p { color: var(--text-muted); font-size: 0.92rem; }
+.stage p { color: rgba(255, 255, 255, 0.8); font-size: 0.92rem; }
 
 .process-image {
   position: sticky;
