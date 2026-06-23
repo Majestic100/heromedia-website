@@ -10,7 +10,11 @@
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=27" />
+  <link rel="stylesheet" href="style.css?v=28" />
+
+  <!-- Wistia hero video player -->
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/3vppqs3ouk.js" async type="module"></script>
 
   <!-- Calendly: preconnect only (script + stylesheet are injected lazily after page load) -->
   <link rel="preconnect" href="https://assets.calendly.com" />
@@ -71,10 +75,7 @@
 
       <div class="hero-video-wrap">
         <div class="hero-video-frame">
-          <!-- Upload din video som assets/hero.mp4 (lodret 9:16). Valgfrit posterbillede: assets/hero-poster.jpg -->
-          <video autoplay muted loop playsinline poster="assets/hero-poster.jpg">
-            <source src="assets/hero.mp4" type="video/mp4" />
-          </video>
+          <wistia-player media-id="3vppqs3ouk" aspect="0.5625"></wistia-player>
           <div class="video-glow"></div>
         </div>
       </div>
