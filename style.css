@@ -2082,7 +2082,7 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
 .results-bento-head h3 {
   font-family: 'Satoshi', sans-serif;
   font-size: clamp(1.7rem, 2.6vw, 2.4rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.15;
   margin-top: 12px;
   letter-spacing: -0.01em;

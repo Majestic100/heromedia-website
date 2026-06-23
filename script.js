@@ -126,7 +126,7 @@ const I18N_DA = {
   'result.r5.tag': 'Fitness',
   'result.r6.headline': 'Online salg efter relancering',
   'result.r6.tag': 'E-handel',
-  'results.featured.tag': '• Udvalgte sejre',
+  'results.featured.tag': '• Udvalgte cases',
   'bento.head': `Historierne bag <em>tallene</em>.`,
   'bento.hero.eyebrow': 'Case 01 · Skønhed & wellness',
   'bento.hero.quote': '"Bookingerne tredobledes på tre måneder. Vi har aldrig haft en marketingpartner, der leverede så hurtigt."',
