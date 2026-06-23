@@ -424,6 +424,47 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
   border-radius: 2px;
 }
 
+/* ============== NAV RIGHT CLUSTER + LANGUAGE SWITCH ============== */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.lang-opt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  line-height: 0;
+  opacity: 0.4;
+  transition: opacity .2s, background .2s;
+}
+.lang-opt:hover { opacity: 0.85; }
+.lang-opt.is-active { opacity: 1; background: rgba(255, 255, 255, 0.16); }
+.flag-icon {
+  display: block;
+  width: 22px;
+  height: 16px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22);
+}
+
 /* ============== HERO (Silberg-inspired) ============== */
 .hero {
   padding: 200px 0 140px;
@@ -1092,6 +1133,10 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
   .logo span { padding: 1px 5px; }
   .hamburger { width: 30px; height: 30px; }
   .hamburger span { width: 16px; }
+  .nav-right { gap: 8px; }
+  .lang-switch { padding: 2px; gap: 2px; }
+  .lang-opt { padding: 3px; }
+  .flag-icon { width: 20px; height: 15px; }
 }
 
 /* ============== MOBILE NAV (when open) ============== */
@@ -1529,7 +1574,7 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
 }
 .framer-heading {
   font-family: 'Satoshi', sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   font-size: clamp(40px, 5.4vw, 68px);
   line-height: 1.12;
   letter-spacing: -0.025em;
@@ -1557,7 +1602,7 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
   position: absolute;
   inset: 0;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 700;
   background: linear-gradient(120deg, #b8c4ff, #8aa0ff);
   -webkit-background-clip: text;
   background-clip: text;
