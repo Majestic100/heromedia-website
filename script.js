@@ -378,7 +378,7 @@ function sizeRotator() {
   const probe = document.createElement('span');
   Object.assign(probe.style, {
     position: 'absolute', visibility: 'hidden', whiteSpace: 'nowrap',
-    left: '-9999px', top: '0', fontWeight: '300',
+    left: '-9999px', top: '0', fontWeight: '700',
   });
   heading.appendChild(probe);
   let maxPx = 0;
