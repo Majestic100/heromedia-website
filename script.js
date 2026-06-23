@@ -26,12 +26,12 @@ const I18N_DA = {
   'trust.line': `+30 brands på <span class="trust-brand">★ Trustpilot</span>`,
 
   // --- Brand marquee ---
-  'brand.head': `Betroet af brands i vækst på tværs af <strong>10+ markeder</strong>`,
+  'brand.head': `Brands i vækst på <strong>10+ markeder</strong> stoler på os`,
 
   // --- About ---
   'about.tag': '• Om Hero Media',
   'about.title': 'Det oplagte valg for virksomheder, der vil vokse online.',
-  'about.body': 'Vi hjælper målrettede virksomheder med at vokse deres online tilstedeværelse med et klart fokus på at levere målbare resultater. Alt, hvad vi skaber, er designet til at flytte dit brand fremad.',
+  'about.body': 'Vi hjælper virksomheder med at vokse deres online tilstedeværelse med et klart fokus på at levere målbare resultater. Alt, hvad vi skaber, er designet til at flytte dit brand fremad.',
   'markets.label': `Live på tværs af <strong>10+ markeder</strong>`,
 
   // --- Countries (about marquee) ---
@@ -47,7 +47,7 @@ const I18N_DA = {
   'country.be': 'Belgien',
 
   // --- Framer section ---
-  'framer.heading.lead': 'Vi hjælper dristige brands med at forvandle annoncekroner til vækst, der',
+  'framer.heading.lead': 'Vi hjælper brands med at forvandle annoncekroner til vækst, der',
   'framer.rotator.1': 'skiller sig ud.',
   'framer.rotator.2': 'skalerer hurtigt.',
   'framer.rotator.3': 'dominerer.',
@@ -142,7 +142,7 @@ const I18N_DA = {
   'bento.wide.s1': 'Øget omsætning',
   'bento.wide.s2': 'Sidebesøgende',
   'bento.wide.s3': 'Indkommende leads',
-  'results.partners.label': 'Betroet af brands i vækst',
+  'results.partners.label': 'Brands i vækst stoler på os',
 
   // --- Founder letter ---
   'letter.tag': '• Et brev fra vores stifter',
