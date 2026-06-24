@@ -193,7 +193,7 @@ const I18N_DA = {
   'footer.nav.contact': 'Kontakt',
   'footer.social.head': 'Sociale medier',
   'footer.copyright': '© 2026 Hero Media',
-  'footer.made': 'Lavet med omtanke i Danmark',
+  'footer.made': 'Lavet af <a href="https://heromedia.dk">heromedia.dk</a>',
 };
 
 (function initI18n() {
