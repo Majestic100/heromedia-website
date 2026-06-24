@@ -81,6 +81,17 @@
     .lp-section { padding: 72px 0; position: relative; }
     .lp-section .section-head { margin-bottom: 38px; }
 
+    /* The shared .results-stat tiles start at opacity:0 and only reveal under a
+       .results-showcase.visible ancestor (the main site's section class). Here
+       the section is .lp-section, so reveal them via this page's own scroll-
+       reveal .visible class instead — otherwise the stats stay invisible. */
+    .lp-section.visible .results-stat { opacity: 1; transform: translateY(0); }
+    .lp-section.visible .results-stat:nth-child(1) { transition-delay: .1s; }
+    .lp-section.visible .results-stat:nth-child(2) { transition-delay: .2s; }
+    .lp-section.visible .results-stat:nth-child(3) { transition-delay: .3s; }
+    .lp-section.visible .results-stat:nth-child(4) { transition-delay: .4s; }
+    .lp-section.visible .results-stat::after { transform: translateX(100%); }
+
     .lp-final { text-align: center; padding: 96px 0 40px; }
     .lp-final h2 { margin-bottom: 14px; }
     .lp-final p { color: var(--text-muted); max-width: 540px; margin: 0 auto 28px; }
