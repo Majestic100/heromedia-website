@@ -4,32 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel — loaded ONLY after cookie consent (GDPR) -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '847588475907012');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=847588475907012&ev=PageView&noscript=1" alt="" /></noscript>
-  <!-- End Meta Pixel Code -->
-
-  <!-- Track Calendly bookings as a Schedule conversion (deduped with the server-side CAPI event via event_id) -->
-  <script>
+    window.hmLoadPixel = function () {
+      if (window.__hmPixelLoaded) return;
+      window.__hmPixelLoaded = true;
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '847588475907012');
+      fbq('track', 'PageView');
+    };
+    // Calendly bookings → Schedule (only fires once the pixel is consented/loaded;
+    // deduped with the server-side CAPI event via event_id)
     window.addEventListener('message', function (e) {
-      if (e && e.data && e.data.event === 'calendly.event_scheduled' && typeof fbq === 'function') {
+      if (e && e.data && e.data.event === 'calendly.event_scheduled' && window.__hmPixelLoaded && typeof fbq === 'function') {
         var p = e.data.payload || {};
         var eid = (p.invitee && p.invitee.uri) || (p.event && p.event.uri) || undefined;
         fbq('track', 'Schedule', {}, eid ? { eventID: eid } : {});
       }
     });
+  </script>
+
+  <!-- Cookie consent gate: only load the pixel after the user accepts -->
+  <script>
+    (function () {
+      var KEY = 'hm_cookie_consent';
+      var c = null; try { c = localStorage.getItem(KEY); } catch (e) {}
+      if (c === 'granted') { window.hmLoadPixel(); return; }
+      if (c === 'denied') { return; }
+      document.addEventListener('DOMContentLoaded', function () {
+        var b = document.getElementById('cookie-banner'); if (!b) return;
+        requestAnimationFrame(function () { b.classList.add('show'); });
+        var close = function (v) { try { localStorage.setItem(KEY, v); } catch (e) {} b.classList.remove('show'); };
+        document.getElementById('cookie-accept').addEventListener('click', function () { close('granted'); window.hmLoadPixel(); });
+        document.getElementById('cookie-decline').addEventListener('click', function () { close('denied'); });
+      });
+    })();
   </script>
 
   <title data-i18n="meta.title">Hero Media | We Help the Ambitious Outperform the Average</title>
@@ -39,7 +55,7 @@
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=35" />
+  <link rel="stylesheet" href="style.css?v=36" />
 
   <!-- Wistia hero video player -->
   <script src="https://fast.wistia.com/player.js" async></script>
@@ -793,5 +809,14 @@
   </footer>
 
   <script src="script.js?v=17"></script>
+
+  <!-- Cookie consent banner -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <p>We use cookies to measure and improve our marketing. <a href="/cookies.html">Learn more</a>.</p>
+    <div class="cookie-actions">
+      <button id="cookie-decline" type="button" class="cookie-btn cookie-btn-ghost">Decline</button>
+      <button id="cookie-accept" type="button" class="cookie-btn cookie-btn-primary">Accept</button>
+    </div>
+  </div>
 </body>
 </html>
