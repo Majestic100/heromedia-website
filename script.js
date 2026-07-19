@@ -85,9 +85,6 @@ const I18N_DA = {
   'case.5.desc': 'Byggede en medlemsmaskine med lead-funnels og retargeting, der fylder fitnesscentret.',
   'case.5.m1': '240% Flere medlemskaber',
   'case.5.m2': '67% Lavere CPA',
-  'case.6.desc': 'Lancerede en ny webshop og skalerede den med brand-tilpassede kampagner og CRO-forbedringer.',
-  'case.6.m1': '3,1x Online salg',
-  'case.6.m2': '+92% Brandkendskab',
 
   // --- Process ---
   'process.tag': '• Sådan arbejder vi',
@@ -124,8 +121,6 @@ const I18N_DA = {
   'result.r4.tag': 'E-handel',
   'result.r5.headline': 'Flere medlemskaber, lavere CPA',
   'result.r5.tag': 'Fitness',
-  'result.r6.headline': 'Online salg efter relancering',
-  'result.r6.tag': 'E-handel',
   'results.featured.tag': '• Udvalgte cases',
   'bento.head': `Historierne bag <em>tallene</em>.`,
   'bento.hero.eyebrow': 'Case 01 · Skønhed & wellness',
@@ -168,8 +163,6 @@ const I18N_DA = {
   'review.3.role': 'CEO · Hidayah',
   'review.4.body': '"Sinan har været en uvurderlig hjælp i planlægningen og udviklingen af ByAlisha-webshoppen. Han er ikke kun dygtig strategisk og teknisk, men også venlig, tålmodig og altid klar med værdifuld rådgivning, når man har brug for det. Man føler sig virkelig støttet og forstået. Jeg kan varmt anbefale at arbejde med Sinan – både som menneske og som fagperson. Tak for alt, Sinan!"',
   'review.4.role': 'Stifter & CEO · ByAlisha',
-  'review.5.body': '"Hero Media med Sinan i spidsen har gjort underværker for DelsouX. De har hjulpet os med at vækste både salg og brandkendskab og samtidig sikret, at vores brandudtryk flugter med vores vision. Hero Media støttede os gennem udviklingen af vores nye webshop og guidede os i, hvordan vi får mest muligt ud af vores marketing. Leder du efter et pålideligt og detaljeorienteret team, der virkelig føles som en partner, anbefaler vi varmt Sinan og Hero Media!"',
-  'review.5.role': 'CEO & stifter · DelsouX',
   'review.6.body': '"Sinan har været afgørende for Car Manias succes. Hans ekspertise inden for paid social på Facebook, Instagram og TikTok har været i særklasse. Han hjalp os hurtigt med at finde de rette videografer og styrede alt indhold, hvilket har været afgørende for at adskille os fra konkurrenterne. Hero Media er resultatorienteret og fuldt dedikeret til vores vækst. Kan varmt anbefales. Tak, Hero Media!"',
   'review.6.role': 'Stifter · Car Mania',
 
@@ -444,7 +437,6 @@ function startLiveTick(el, base, suffix, decimals) {
     }, 5 * 60 * 1000);
   }, 5 * 60 * 1000);
 }
-
 
 // ---------- Cursor spotlight on hero ----------
 const hero = document.querySelector('.hero');
