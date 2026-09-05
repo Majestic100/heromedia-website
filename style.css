@@ -2444,6 +2444,41 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
   .trust-line { font-size: 10px; }
 }
 
+/* ============== MOBILE HERO (after base + animation rules) ==============
+   The hero rules further up are overridden by the word-reveal block, which
+   re-declares .hero-text h1 with a 2.6rem floor. On a phone that left the
+   headline oversized, centred and cramped against the nav. These rules run
+   last so they win. */
+@media (max-width: 640px) {
+  .hero { padding: 112px 0 56px; }
+  .hero-grid { gap: 40px; }
+
+  /* Left-aligned like the desktop hero: long Danish words rag far better
+     against a left edge than centred. */
+  .hero-text { align-items: flex-start; text-align: left; }
+
+  .hero-text h1 {
+    font-size: clamp(2rem, 8.6vw, 2.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    word-spacing: 0;
+    max-width: none;
+    margin-bottom: 18px;
+    padding-bottom: 0.08em;
+  }
+  .hero-sub {
+    font-size: 1rem;
+    line-height: 1.55;
+    max-width: none;
+    margin: 0 0 24px;
+  }
+  .hero-cta { width: 100%; margin-bottom: 18px; }
+  .hero-cta .btn { width: 100%; padding: 14px 22px; font-size: 0.95rem; }
+  .trust-badge { align-self: flex-start; }
+
+  .hero-video-frame { max-width: 280px; margin: 0 auto; }
+}
+
 /* ============== COOKIE CONSENT BANNER ============== */
 .cookie-banner {
   position: fixed;
