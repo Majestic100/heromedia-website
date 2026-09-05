@@ -2458,20 +2458,25 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
 .nav-cta-mobile { display: none; }
 
 @media (max-width: 640px) {
-  .hero { padding: 120px 0 64px; }
+  .hero { padding: 96px 0 64px; }
   .hero-grid { gap: 0; justify-items: center; }
   .hero-text { display: contents; }
 
+  /* Slightly smaller type that runs a little wider than the column, with
+     balanced line breaks, so the headline reads as three even lines. */
   .hero-text h1 {
     order: 1;
-    width: 100%;
+    width: calc(100% + 12px);
+    margin-left: -6px;
+    margin-right: -6px;
     max-width: none;
     text-align: center;
-    font-size: clamp(1.9rem, 8vw, 2.35rem);
-    line-height: 1.1;
-    letter-spacing: -0.025em;
+    text-wrap: balance;
+    font-size: clamp(1.7rem, 7.2vw, 2.1rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
     word-spacing: 0;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     padding-bottom: 0.08em;
   }
 
