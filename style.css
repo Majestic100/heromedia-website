@@ -2516,6 +2516,40 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
   .nav-links.open .lang-switch-menu { display: inline-flex; align-self: flex-start; margin-top: 4px; }
 }
 
+/* ============== MOBILE VERTICAL RHYTHM (after all section rules) ==============
+   On phones the section paddings (60px + 60px) plus the 56px section-head
+   margins left 110-160px of dead space between every block. One consistent
+   rhythm instead: ~44px section padding, ~32px under headings. Runs last so
+   it beats the per-section media queries above. */
+@media (max-width: 640px) {
+  .hero { padding-bottom: 48px; }
+  .brand-marquee-section { padding: 36px 0 32px; }
+  .brand-head { margin-bottom: 22px; }
+
+  .about, .cases, .process, .letter, .reviews, .contact,
+  .results-showcase { padding: 44px 0; }
+  .about-framer { padding: 48px 0 44px; }
+  .footer { padding: 40px 0 20px; }
+
+  .section-head,
+  .results-showcase .section-head { margin-bottom: 32px; }
+  .section-head h2 { margin-bottom: 10px; }
+  .about-text h2, .letter-text h2 { margin-bottom: 14px; }
+  .process-left { gap: 28px; }
+
+  .framer-tag { margin-bottom: 28px; }
+  .framer-grid { padding-bottom: 32px; }
+  .framer-stats { margin-top: 24px; gap: 18px; }
+  .framer-meta { margin-top: 20px; }
+
+  .results-aggregate { margin-bottom: 32px; }
+  .results-bento { margin-bottom: 36px; }
+  .results-bento-head { margin-bottom: 20px; }
+
+  .letter-text p:last-child { margin-bottom: 0; }
+  .footer-inner { gap: 24px; margin-bottom: 28px; }
+}
+
 /* ============== COOKIE CONSENT BANNER ============== */
 .cookie-banner {
   position: fixed;
