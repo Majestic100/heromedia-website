@@ -24,7 +24,7 @@ const I18N_DA = {
   'hero.sub': 'Konverteringsfokuseret digital marketing. Vi udvikler strategierne, bygger funnels og skaber det indhold, der rent faktisk flytter nålen, så dit brand vokser dér, hvor det betyder mest: på bundlinjen.',
   'hero.cta': 'Book et gratis uforpligtende møde',
   'hero.sub.m1': 'Strategi, content, funnels og annoncering.',
-  'hero.sub.m2': 'Konverteringsfokuseret marketing, der flytter bundlinjen.',
+  'hero.sub.m2': 'Performance marketing, der ændrer bundlinjen.',
   'trust.rating': `<strong>4.7</strong> <span>fra</span>`,
   'trust.line': `+30 brands på <span class="trust-brand">★ Trustpilot</span>`,
 
