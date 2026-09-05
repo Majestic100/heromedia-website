@@ -2542,11 +2542,6 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
 
   .letter-text p:last-child { margin-bottom: 0; }
   .footer-inner { gap: 24px; margin-bottom: 28px; }
-
-  /* Copy fit: the desktop-only line break in the process heading forces a
-     third line on phones, and the stats heading was 40px on a 342px column. */
-  .section-head h2 br, .process-head h2 br { display: none; }
-  .framer-heading { font-size: clamp(30px, 8.6vw, 36px); padding-bottom: 32px; }
 }
 
 /* ============== COOKIE CONSENT BANNER ============== */
