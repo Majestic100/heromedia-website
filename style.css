@@ -1144,14 +1144,23 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
 /* ============== MOBILE NAV (when open) ============== */
 .nav-links.open {
   display: flex;
-  position: fixed;
-  top: 72px; left: 0; right: 0;
+  position: absolute;
+  top: calc(100% + 8px); left: 0; right: 0;
+  z-index: 5;
   background: var(--bg-2);
   flex-direction: column;
-  padding: 24px;
-  gap: 18px;
-  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+  padding: 20px 22px;
+  gap: 14px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
+/* .nav-inner clips its glass sheen with overflow:hidden, and its
+   backdrop-filter makes it the containing block for the menu, so the open
+   menu used to be clipped away entirely. Let it out while open. */
+.nav-inner:has(.nav-links.open) { overflow: visible; }
+.nav-inner:has(.nav-links.open)::after { display: none; }
 
 /* ============== FADE-IN ANIMATION ============== */
 .fade-in {
@@ -2445,38 +2454,66 @@ h2 em { color: var(--accent); font-style: normal; font-weight: 700; }
 }
 
 /* ============== MOBILE HERO (after base + animation rules) ==============
-   The hero rules further up are overridden by the word-reveal block, which
-   re-declares .hero-text h1 with a 2.6rem floor. On a phone that left the
-   headline oversized, centred and cramped against the nav. These rules run
-   last so they win. */
-@media (max-width: 640px) {
-  .hero { padding: 112px 0 56px; }
-  .hero-grid { gap: 40px; }
+   Phone layout: headline -> video -> two short lines -> CTA -> Trustpilot.
+   .hero-text becomes display:contents so its children join the single-column
+   grid and can be re-ordered around the video without touching the DOM.
+   These rules run last so they beat the word-reveal block, which re-declares
+   .hero-text h1 with a 2.6rem floor. */
+.hero-sub-mobile { display: none; }
+.lang-switch-menu { display: none; }
+.nav-cta-mobile { display: none; }
 
-  /* Left-aligned like the desktop hero: long Danish words rag far better
-     against a left edge than centred. */
-  .hero-text { align-items: flex-start; text-align: left; }
+@media (max-width: 640px) {
+  .hero { padding: 104px 0 52px; }
+  .hero-grid { gap: 0; justify-items: center; }
+  .hero-text { display: contents; }
 
   .hero-text h1 {
-    font-size: clamp(2rem, 8.6vw, 2.5rem);
-    line-height: 1.08;
+    order: 1;
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    font-size: clamp(1.9rem, 8vw, 2.35rem);
+    line-height: 1.1;
     letter-spacing: -0.025em;
     word-spacing: 0;
-    max-width: none;
     margin-bottom: 18px;
     padding-bottom: 0.08em;
   }
-  .hero-sub {
-    font-size: 1rem;
-    line-height: 1.55;
-    max-width: none;
-    margin: 0 0 24px;
-  }
-  .hero-cta { width: 100%; margin-bottom: 18px; }
-  .hero-cta .btn { width: 100%; padding: 14px 22px; font-size: 0.95rem; }
-  .trust-badge { align-self: flex-start; }
 
-  .hero-video-frame { max-width: 280px; margin: 0 auto; }
+  .hero-video-wrap { order: 2; width: 100%; margin-bottom: 22px; }
+  .hero-video-frame { max-width: 210px; margin: 0 auto; border-radius: 20px; }
+
+  .hero-sub { display: none; }
+  .hero-sub-mobile {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    max-width: 34ch;
+    margin: 0 auto 20px;
+  }
+  .hero-sub-mobile p { margin: 0; color: var(--text-muted); font-size: 0.97rem; line-height: 1.45; }
+  .hero-sub-mobile p:last-child { color: var(--text); font-weight: 500; }
+
+  .hero-cta { order: 4; width: 100%; justify-content: center; margin-bottom: 18px; }
+  .hero-cta .btn { width: 100%; padding: 15px 22px; font-size: 0.98rem; }
+
+  .trust-badge { order: 5; align-self: center; }
+
+  /* Top bar: logo + CTA + burger. The language switch moves into the menu. */
+  .nav-inner { gap: 8px; padding: 4px 5px 4px 12px; }
+  .nav-right .lang-switch:not(.lang-switch-menu) { display: none; }
+  .nav-cta-mobile {
+    display: inline-flex;
+    padding: 8px 13px;
+    font-size: 0.78rem;
+    line-height: 1;
+    border-radius: 999px;
+  }
+  .nav-cta-mobile::before, .nav-cta-mobile::after { display: none; }
+  .nav-links.open .lang-switch-menu { display: inline-flex; align-self: flex-start; margin-top: 4px; }
 }
 
 /* ============== COOKIE CONSENT BANNER ============== */

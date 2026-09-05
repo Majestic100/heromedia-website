@@ -17,11 +17,14 @@ const I18N_DA = {
   'nav.about': 'Om os',
   'nav.cases': 'Cases',
   'nav.cta': 'Lad os vækste din bundlinje',
+  'nav.cta.short': 'Book et gratis møde',
 
   // --- Hero ---
   'hero.title': `Vi hjælper de <span class="muted">ambitiøse med at overgå</span> gennemsnittet.`,
   'hero.sub': 'Konverteringsfokuseret digital marketing. Vi udvikler strategierne, bygger funnels og skaber det indhold, der rent faktisk flytter nålen, så dit brand vokser dér, hvor det betyder mest: på bundlinjen.',
   'hero.cta': 'Book et gratis uforpligtende møde',
+  'hero.sub.m1': 'Strategi, content, funnels, annoncering og media buying.',
+  'hero.sub.m2': 'Konverteringsfokuseret marketing, der flytter bundlinjen.',
   'trust.rating': `<strong>4.7</strong> <span>fra</span>`,
   'trust.line': `+30 brands på <span class="trust-brand">★ Trustpilot</span>`,
 
