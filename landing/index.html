@@ -75,7 +75,7 @@
     .lp-nav .logo { font-family: 'Barlow', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.04em; }
     .lp-nav .btn { padding: 9px 18px; font-size: 0.86rem; }
 
-    .lp-hero { padding: 130px 0 64px; position: relative; overflow: hidden; }
+    .lp-hero { padding: 130px 0 40px; position: relative; overflow: hidden; }
     .lp-hero::before {
       content: ''; position: absolute; top: -160px; left: 50%; transform: translateX(-50%);
       width: 760px; height: 760px; border-radius: 50%;
@@ -93,7 +93,8 @@
     .lp-hero-head h1 .accent { color: var(--accent); }
     .lp-lead { color: var(--text-muted); font-size: clamp(1.05rem, 1.4vw, 1.25rem); line-height: 1.55; margin: 0 auto 26px; max-width: 640px; }
     .lp-trust-row { display: flex; justify-content: center; }
-    .lp-lead-below { text-align: center; margin: 32px auto 0; }
+    .lp-lead-below { text-align: center; margin: 22px auto 0; font-size: 1rem; max-width: 560px; }
+    .lp-hero + .lp-section { padding-top: 40px; }
 
     .lp-cal-wrap {
       max-width: 1000px; margin: 0 auto; border-radius: var(--radius); overflow: hidden;
@@ -126,7 +127,8 @@
     .lp-footer a:hover { color: var(--text); }
 
     @media (max-width: 640px) {
-      .lp-hero { padding: 100px 0 48px; }
+      .lp-hero { padding: 100px 0 28px; }
+      .lp-hero + .lp-section { padding-top: 32px; }
       .lp-hero-head h1 { font-size: clamp(1.5rem, 6.4vw, 1.75rem); line-height: 1.18; letter-spacing: -0.02em; margin-bottom: 16px; }
       .lp-section { padding: 52px 0; }
       .lp-final { padding: 64px 0 32px; }
@@ -183,16 +185,14 @@
   <section class="lp-section">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">• Derfor booker du en vækstsamtale</span>
-        <h2>Hvad du får ud af samtalen</h2>
-        <p>Ingen tomme løfter, kun konkrete input du kan handle på med det samme.</p>
+        <h2>Det eneste marketing team, du har brug for</h2>
       </div>
       <ul class="contact-usps" aria-label="Derfor booker du">
         <li class="contact-usp">
           <span class="contact-usp-icon">⏱</span>
           <div>
             <h4>0 måneders binding</h4>
-            <p>Måned-til-måned-samarbejde. Opsig når som helst. Vi fortjener fornyelsen med resultater, ikke med kontrakter.</p>
+            <p>Vi binder ikke nogen til lænker. Vi fortjener vores fornyelser med resultater, ikke med kontrakter.</p>
           </div>
         </li>
         <li class="contact-usp">
