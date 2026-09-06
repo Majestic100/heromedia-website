@@ -105,7 +105,17 @@
 
     .lp-section { padding: 72px 0; position: relative; }
     .lp-cta-row { display: flex; justify-content: center; margin-top: 44px; }
-    .lp-cta-row .btn { padding: 15px 34px; font-size: 1rem; }
+    .lp-cta-row .btn {
+      padding: 15px 34px; font-size: 1rem; font-weight: 500;
+      background: var(--accent) !important; color: #fff !important;
+      box-shadow: 0 10px 30px -8px var(--accent-glow);
+      transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+    }
+    .lp-cta-row .btn:hover {
+      background: var(--accent-hover) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 16px 38px -8px var(--accent-glow);
+    }
     .lp-section .section-head { margin-bottom: 38px; }
 
     /* The shared .results-stat tiles start at opacity:0 and only reveal under a
