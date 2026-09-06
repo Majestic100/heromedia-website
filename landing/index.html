@@ -104,6 +104,7 @@
     .calendly-inline-widget { min-width: 320px; height: 720px; }
 
     .lp-section { padding: 72px 0; position: relative; }
+    .lp-section + .lp-section { padding-top: 20px; }
     .lp-cta-row { display: flex; justify-content: center; margin-top: 44px; }
     .lp-cta-row .btn {
       padding: 15px 34px; font-size: 1rem; font-weight: 500;
@@ -143,6 +144,8 @@
       .lp-hero + .lp-section { padding-top: 32px; }
       .lp-hero-head h1 { font-size: clamp(1.5rem, 6.4vw, 1.75rem); line-height: 1.18; letter-spacing: -0.02em; margin-bottom: 16px; }
       .lp-section { padding: 52px 0; }
+      .lp-section + .lp-section { padding-top: 8px; }
+      .lp-section .section-head { margin-bottom: 28px; }
       .lp-cta-row { margin-top: 32px; }
       .lp-cta-row .btn { width: 100%; justify-content: center; }
       .lp-final { padding: 64px 0 32px; }
@@ -231,7 +234,6 @@
   <section class="lp-section">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">• Dokumenterede resultater</span>
         <h2>Tal, der taler for sig selv</h2>
         <p>Rigtige kampagner. Rigtig omsætning. Rigtige brands, der satser på os og vinder.</p>
       </div>
