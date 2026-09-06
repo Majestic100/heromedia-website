@@ -89,7 +89,7 @@
       background: rgba(255,255,255,0.05); border: 1px solid var(--border);
     }
     .lp-eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #2ecc71; box-shadow: 0 0 10px #2ecc71; }
-    .lp-hero-head h1 { font-size: clamp(2.2rem, 5vw, 3.7rem); line-height: 1.04; margin-bottom: 18px; }
+    .lp-hero-head h1 { font-size: clamp(2rem, 4.2vw, 3.2rem); line-height: 1.08; margin-bottom: 18px; text-wrap: balance; }
     .lp-hero-head h1 .accent { color: var(--accent); }
     .lp-lead { color: var(--text-muted); font-size: clamp(1.05rem, 1.4vw, 1.25rem); line-height: 1.55; margin: 0 auto 26px; max-width: 640px; }
     .lp-trust-row { display: flex; justify-content: center; }
@@ -127,6 +127,7 @@
 
     @media (max-width: 640px) {
       .lp-hero { padding: 100px 0 48px; }
+      .lp-hero-head h1 { font-size: clamp(1.5rem, 6.4vw, 1.75rem); line-height: 1.18; letter-spacing: -0.02em; margin-bottom: 16px; }
       .lp-section { padding: 52px 0; }
       .lp-final { padding: 64px 0 32px; }
       .calendly-inline-widget { height: 760px; }
