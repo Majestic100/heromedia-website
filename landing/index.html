@@ -317,6 +317,39 @@
     </div>
   </footer>
 
+  <!-- Pass Meta click IDs + campaign params into the Calendly embed so the
+       Conversions API can attribute the booking to the ad that drove it.
+       Runs before widget.js initialises the inline widget. -->
+  <script>
+    (function () {
+      function cookie(name) {
+        var m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+        return m ? m.pop() : '';
+      }
+      var q = new URLSearchParams(location.search);
+
+      // _fbc is set by the pixel from fbclid. Build it ourselves if the pixel
+      // was blocked or has not run yet, so a blocked pixel still yields a click id.
+      var fbc = cookie('_fbc');
+      if (!fbc && q.get('fbclid')) fbc = 'fb.1.' + Date.now() + '.' + q.get('fbclid');
+      var fbp = cookie('_fbp');
+
+      var extra = {};
+      if (fbc) extra.utm_term = fbc;          // read back as payload.tracking.utm_term
+      if (fbp) extra.salesforce_uuid = fbp;   // read back as payload.tracking.salesforce_uuid
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(function (k) {
+        if (q.get(k)) extra[k] = q.get(k);
+      });
+      if (!Object.keys(extra).length) return;
+
+      document.querySelectorAll('.calendly-inline-widget[data-url]').forEach(function (el) {
+        var url = new URL(el.getAttribute('data-url'));
+        Object.keys(extra).forEach(function (k) { url.searchParams.set(k, extra[k]); });
+        el.setAttribute('data-url', url.toString());
+      });
+    })();
+  </script>
+
   <!-- Calendly embed -->
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
