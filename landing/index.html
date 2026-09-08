@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Meta Pixel — loaded ONLY after cookie consent (GDPR) -->
+  <!-- Meta Pixel -->
   <script>
     window.hmLoadPixel = function () {
       if (window.__hmPixelLoaded) return;
@@ -29,19 +29,23 @@
     });
   </script>
 
-  <!-- Cookie consent gate -->
+  <!-- Cookie notice: informational only, measurement is not gated -->
   <script>
     (function () {
-      var KEY = 'hm_cookie_consent';
-      var c = null; try { c = localStorage.getItem(KEY); } catch (e) {}
-      if (c === 'granted') { window.hmLoadPixel(); return; }
-      if (c === 'denied') { return; }
+      // Measurement runs on every visit. The banner below is an information
+      // notice, not a gate, so it carries a single acknowledge button.
+      window.hmLoadPixel();
+
+      var KEY = 'hm_cookie_notice';
+      var seen = null; try { seen = localStorage.getItem(KEY); } catch (e) {}
+      if (seen === 'seen') return;
       document.addEventListener('DOMContentLoaded', function () {
         var b = document.getElementById('cookie-banner'); if (!b) return;
         requestAnimationFrame(function () { b.classList.add('show'); });
-        var close = function (v) { try { localStorage.setItem(KEY, v); } catch (e) {} b.classList.remove('show'); };
-        document.getElementById('cookie-accept').addEventListener('click', function () { close('granted'); window.hmLoadPixel(); });
-        document.getElementById('cookie-decline').addEventListener('click', function () { close('denied'); });
+        document.getElementById('cookie-ok').addEventListener('click', function () {
+          try { localStorage.setItem(KEY, 'seen'); } catch (e) {}
+          b.classList.remove('show');
+        });
       });
     })();
   </script>
@@ -388,11 +392,10 @@
   </script>
 
   <!-- Cookie consent banner -->
-  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie-samtykke">
+  <div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie-information">
     <p>Vi bruger cookies til at måle og forbedre vores markedsføring. <a href="/cookies.html">Læs mere</a>.</p>
     <div class="cookie-actions">
-      <button id="cookie-decline" type="button" class="cookie-btn cookie-btn-ghost">Afvis</button>
-      <button id="cookie-accept" type="button" class="cookie-btn cookie-btn-primary">Acceptér</button>
+      <button id="cookie-ok" type="button" class="cookie-btn cookie-btn-primary">OK</button>
     </div>
   </div>
 </body>
